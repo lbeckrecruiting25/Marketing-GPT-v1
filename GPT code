@@ -3,7 +3,7 @@ import streamlit as st
 
 # Load the content calendar
 def load_content_calendar():
-    file_path = "/mnt/data/Its the Final Countdown.xlsx"
+    file_path = "Its the Final Countdown.xlsx"
     xls = pd.ExcelFile(file_path)
     df = pd.read_excel(xls, sheet_name="Content Calendar")
     df["date"] = pd.to_datetime(df["date"])
